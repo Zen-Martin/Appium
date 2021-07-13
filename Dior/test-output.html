@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.10.3"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"25.281-b09"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1623839787","nanos":855000000}}},{"source":{"uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorGetConnect.feature","data":"Feature: Re-Test Cases for DIOR Website with account Access\r\n\r\n  Background:\r\n    Given User access to his account\r\n\r\n  #------------------- Bug 391 -------------------------------------------------------\r\n  @Bug391\r\n  Scenario: Check that after deconnexion user favoris don\u0027t appear\r\n    When User click on favoris\r\n    Then User should see favoris element appear\r\n    And User click get disconnected\r\n    Then User should see favoris element disappear","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorGetConnect.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Re-Test Cases for DIOR Website with account Access","children":[{"background":{"location":{"line":3,"column":3},"keyword":"Background","steps":[{"location":{"line":4,"column":5},"keyword":"Given ","text":"User access to his account","id":"77d24810-c92e-4813-afa3-cc49f7b7d682"}],"id":"7eaba3dc-035d-49bf-b4be-9f9d6ce32e06"}},{"scenario":{"location":{"line":8,"column":3},"tags":[{"location":{"line":7,"column":3},"name":"@Bug391","id":"41ab42bc-8ea3-4dcf-b6da-e58f84fa8ce2"}],"keyword":"Scenario","name":"Check that after deconnexion user favoris don\u0027t appear","steps":[{"location":{"line":9,"column":5},"keyword":"When ","text":"User click on favoris","id":"5d8833e1-fef1-413a-bd85-0e4a702403b1"},{"location":{"line":10,"column":5},"keyword":"Then ","text":"User should see favoris element appear","id":"65539216-f9c5-4957-9c28-2783f138ef31"},{"location":{"line":11,"column":5},"keyword":"And ","text":"User click get disconnected","id":"360df355-2d0e-421d-ab0e-dd3768a0029c"},{"location":{"line":12,"column":5},"keyword":"Then ","text":"User should see favoris element disappear","id":"f483b498-6539-4a67-86dd-5aa7b46e9364"}],"id":"5806fa80-59ab-425d-bc08-dc11e22f6bb0"}}]},"comments":[{"location":{"line":6,"column":1},"text":"  #------------------- Bug 391 -------------------------------------------------------"}]}},{"pickle":{"id":"7cc8216f-4759-4ec9-a11c-72f38f2adaf9","uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorGetConnect.feature","name":"Check that after deconnexion user favoris don\u0027t appear","language":"en","steps":[{"text":"User access to his account","id":"cc1b379e-c53f-4c29-8d44-39ec13649f2e","astNodeIds":["77d24810-c92e-4813-afa3-cc49f7b7d682"]},{"text":"User click on favoris","id":"7d5c648c-3a63-4c27-8d86-f26aa395e66c","astNodeIds":["5d8833e1-fef1-413a-bd85-0e4a702403b1"]},{"text":"User should see favoris element appear","id":"c81cbc02-b1e3-48f3-ada4-fa1fcf2fadec","astNodeIds":["65539216-f9c5-4957-9c28-2783f138ef31"]},{"text":"User click get disconnected","id":"6242f2b6-0f15-47c2-bef4-06f715c98f7c","astNodeIds":["360df355-2d0e-421d-ab0e-dd3768a0029c"]},{"text":"User should see favoris element disappear","id":"93a87ca3-00f8-48ea-8108-0e53611785fd","astNodeIds":["f483b498-6539-4a67-86dd-5aa7b46e9364"]}],"tags":[{"name":"@Bug391","astNodeId":"41ab42bc-8ea3-4dcf-b6da-e58f84fa8ce2"}],"astNodeIds":["5806fa80-59ab-425d-bc08-dc11e22f6bb0"]}},{"source":{"uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorWithoutGetConnect.feature","data":"Feature: Re-Test Cases for DIOR Website without account Access\r\n\r\n  #------------------- Bug 381 -------------------------------------------------------\r\n  @Bug381\r\n  Scenario: Check that traduction is effective\r\n    Given User is on international website homepage\r\n    Then User should see all headers elements in english\r\n\r\n  #------------------- Bug 351 -------------------------------------------------------\r\n  @Bug351\r\n  Scenario: Check that frame have same size\r\n    Given User is on website french version on rubrique **CGV**\r\n    Then User should see frame with same size after redirection\r\n\r\n  #------------------- Bug 357 -------------------------------------------------------\r\n  @Bug357\r\n  Scenario: Check that **ask question button** is cliquable\r\n    Given User is on website french version on rubrique **contact-couture**\r\n    When User scroll-down\r\n    Then User should be able to click on ask question\r\n\r\n  #------------------- Bug 375 -------------------------------------------------------\r\n  @Bug375\r\n  Scenario: Check that require size for password is the same everywhere\r\n    Given User is on login version page\r\n    Then User get login password size requirement\r\n    And User is on inscription version page\r\n    Then User get inscription password size requirement\r\n    And User should have save size requirement\r\n\r\n  #------------------- Bug 385 -------------------------------------------------------\r\n  @Bug385\r\n  Scenario: Check that link aren\u0027t same\r\n    Given User is on **metier page**\r\n    When User click on **horlogerie**\r\n    Then User should be on another page\r\n\r\n  #------------------- Bug 392 -------------------------------------------------------\r\n  @Bug392\r\n  Scenario: Check that we can connect on the international website\r\n    Given User is on website french version\r\n    Then User should be able to connect\r\n    And User move to international website\r\n    Then User should be also able to connect\r\n\r\n  #------------------- Bug 395 -------------------------------------------------------\r\n  @Bug395\r\n  Scenario: Check that slider effects is available\r\n    Given User is on **dior maquillage** page\r\n    When User plays with slider\r\n    Then User should see slider effects\r\n\r\n  #------------------- Bug 348 -------------------------------------------------------\r\n  @Bug348\r\n  Scenario: Check that text-area provides space with writing zone\r\n    Given User is on contact_couture page\r\n    When User write inside zone area\r\n    Then User should see space between zone and writting\r\n\r\n  #------------------- Bug 404 -------------------------------------------------------\r\n  @Bug404\r\n  Scenario: Check that langage service header appear everytime\r\n    Given User is on hompage\r\n    When User plays with langage version\r\n    Then User should see service header appear appear\r\n\r\n\r\n\r\n\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorWithoutGetConnect.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Re-Test Cases for DIOR Website without account Access","children":[{"scenario":{"location":{"line":5,"column":3},"tags":[{"location":{"line":4,"column":3},"name":"@Bug381","id":"b4957210-bf9e-4ed5-9c13-d2afd1e03aca"}],"keyword":"Scenario","name":"Check that traduction is effective","steps":[{"location":{"line":6,"column":5},"keyword":"Given ","text":"User is on international website homepage","id":"5167b66d-6fdc-412a-b428-f8d3655c71bc"},{"location":{"line":7,"column":5},"keyword":"Then ","text":"User should see all headers elements in english","id":"db1233cb-8b36-4788-8be2-2527c53705ac"}],"id":"a4b07a6c-caf6-469c-9708-abf3300f4fe6"}},{"scenario":{"location":{"line":11,"column":3},"tags":[{"location":{"line":10,"column":3},"name":"@Bug351","id":"67713597-5a61-45b2-8119-515a8229b54e"}],"keyword":"Scenario","name":"Check that frame have same size","steps":[{"location":{"line":12,"column":5},"keyword":"Given ","text":"User is on website french version on rubrique **CGV**","id":"65a95263-082f-4371-8227-6d5adec30d09"},{"location":{"line":13,"column":5},"keyword":"Then ","text":"User should see frame with same size after redirection","id":"88be4fbb-e90f-4b0c-b732-c92f322343e5"}],"id":"19fb4759-82b7-4f54-81dd-8158d56000ea"}},{"scenario":{"location":{"line":17,"column":3},"tags":[{"location":{"line":16,"column":3},"name":"@Bug357","id":"a1a725ec-bca5-42f1-ad3c-511616b48523"}],"keyword":"Scenario","name":"Check that **ask question button** is cliquable","steps":[{"location":{"line":18,"column":5},"keyword":"Given ","text":"User is on website french version on rubrique **contact-couture**","id":"2b4ead74-252e-45f6-bf57-7b9bd553f72b"},{"location":{"line":19,"column":5},"keyword":"When ","text":"User scroll-down","id":"b185db36-4d09-4ec2-96d9-aacfe5523aae"},{"location":{"line":20,"column":5},"keyword":"Then ","text":"User should be able to click on ask question","id":"b00e02ed-15e0-4db5-8888-ee3b8280193f"}],"id":"79873c09-6c06-4790-9a82-42f03f42c765"}},{"scenario":{"location":{"line":24,"column":3},"tags":[{"location":{"line":23,"column":3},"name":"@Bug375","id":"4f786408-c13f-464e-a3be-11a1c3a0405b"}],"keyword":"Scenario","name":"Check that require size for password is the same everywhere","steps":[{"location":{"line":25,"column":5},"keyword":"Given ","text":"User is on login version page","id":"88e22c38-73bf-4468-8e14-93b154608e18"},{"location":{"line":26,"column":5},"keyword":"Then ","text":"User get login password size requirement","id":"b169ac49-3626-4d30-9871-62541cb6086e"},{"location":{"line":27,"column":5},"keyword":"And ","text":"User is on inscription version page","id":"568cf34b-a821-477d-a899-6301de30d91d"},{"location":{"line":28,"column":5},"keyword":"Then ","text":"User get inscription password size requirement","id":"8afb93f5-1a4c-4d5e-a134-bf77cb42f08e"},{"location":{"line":29,"column":5},"keyword":"And ","text":"User should have save size requirement","id":"08eb538d-90cc-4980-ab2f-b8c8ddb84128"}],"id":"4be974bf-8de4-4695-b552-bf595e8fa15e"}},{"scenario":{"location":{"line":33,"column":3},"tags":[{"location":{"line":32,"column":3},"name":"@Bug385","id":"5e563710-2a5d-4f90-bf1e-f835be5c75e1"}],"keyword":"Scenario","name":"Check that link aren\u0027t same","steps":[{"location":{"line":34,"column":5},"keyword":"Given ","text":"User is on **metier page**","id":"9494b13e-4962-4a60-98d4-c6f27aa6b539"},{"location":{"line":35,"column":5},"keyword":"When ","text":"User click on **horlogerie**","id":"f963e5c6-3a44-47c8-b3ad-d2877ef44fd9"},{"location":{"line":36,"column":5},"keyword":"Then ","text":"User should be on another page","id":"44c264a2-357a-49b5-9ba0-c45c096456cd"}],"id":"0cdf0f5b-68ab-4cec-905e-a6612e215cc1"}},{"scenario":{"location":{"line":40,"column":3},"tags":[{"location":{"line":39,"column":3},"name":"@Bug392","id":"2181ac51-9c77-4238-af0b-a3bcce779861"}],"keyword":"Scenario","name":"Check that we can connect on the international website","steps":[{"location":{"line":41,"column":5},"keyword":"Given ","text":"User is on website french version","id":"c948fe70-9614-4a51-a7de-ecd307d2f748"},{"location":{"line":42,"column":5},"keyword":"Then ","text":"User should be able to connect","id":"1e295a6c-e930-49cd-8e1f-3326ba78380d"},{"location":{"line":43,"column":5},"keyword":"And ","text":"User move to international website","id":"f8abd7ea-c904-4890-8d95-baaa78cb828d"},{"location":{"line":44,"column":5},"keyword":"Then ","text":"User should be also able to connect","id":"4f38fd3a-e750-4183-babd-4e4fec3f3719"}],"id":"dcd372c1-2cb0-467d-9a3e-23f367c8fda2"}},{"scenario":{"location":{"line":48,"column":3},"tags":[{"location":{"line":47,"column":3},"name":"@Bug395","id":"15c48f69-fee5-4d3e-b660-dab0d9e5c94a"}],"keyword":"Scenario","name":"Check that slider effects is available","steps":[{"location":{"line":49,"column":5},"keyword":"Given ","text":"User is on **dior maquillage** page","id":"8fbd865c-8646-4ece-ad9c-22c1203fdd94"},{"location":{"line":50,"column":5},"keyword":"When ","text":"User plays with slider","id":"5de883e4-be6b-4d72-a19d-0e010bc5a87e"},{"location":{"line":51,"column":5},"keyword":"Then ","text":"User should see slider effects","id":"fad72738-e684-4143-82a5-fa7facc16834"}],"id":"8e45f314-159d-47bd-9348-16bc10296a9f"}},{"scenario":{"location":{"line":55,"column":3},"tags":[{"location":{"line":54,"column":3},"name":"@Bug348","id":"3afbffce-b3ee-4693-a4ef-5b3879a24938"}],"keyword":"Scenario","name":"Check that text-area provides space with writing zone","steps":[{"location":{"line":56,"column":5},"keyword":"Given ","text":"User is on contact_couture page","id":"3bca64e7-d270-401e-98d4-da339cd5b551"},{"location":{"line":57,"column":5},"keyword":"When ","text":"User write inside zone area","id":"099dcefb-4370-451b-abf5-b1541bf3bf8c"},{"location":{"line":58,"column":5},"keyword":"Then ","text":"User should see space between zone and writting","id":"9f42c5f2-ffb7-4868-9f4c-0ef438e7215e"}],"id":"b54c3d27-0473-4da7-9756-aca59b2e6bd1"}},{"scenario":{"location":{"line":62,"column":3},"tags":[{"location":{"line":61,"column":3},"name":"@Bug404","id":"eb206c20-b2f1-49f6-bc99-1c901b43b782"}],"keyword":"Scenario","name":"Check that langage service header appear everytime","steps":[{"location":{"line":63,"column":5},"keyword":"Given ","text":"User is on hompage","id":"98bd852d-71be-4ed6-ab4b-9fe912fc6012"},{"location":{"line":64,"column":5},"keyword":"When ","text":"User plays with langage version","id":"ad9f51ae-3da9-4300-9d10-8634fd0c5132"},{"location":{"line":65,"column":5},"keyword":"Then ","text":"User should see service header appear appear","id":"b828a06f-23cf-49f8-a7d8-2ece345e73c3"}],"id":"9aaafa4f-82e9-4795-beda-e875307f8a66"}}]},"comments":[{"location":{"line":3,"column":1},"text":"  #------------------- Bug 381 -------------------------------------------------------"},{"location":{"line":9,"column":1},"text":"  #------------------- Bug 351 -------------------------------------------------------"},{"location":{"line":15,"column":1},"text":"  #------------------- Bug 357 -------------------------------------------------------"},{"location":{"line":22,"column":1},"text":"  #------------------- Bug 375 -------------------------------------------------------"},{"location":{"line":31,"column":1},"text":"  #------------------- Bug 385 -------------------------------------------------------"},{"location":{"line":38,"column":1},"text":"  #------------------- Bug 392 -------------------------------------------------------"},{"location":{"line":46,"column":1},"text":"  #------------------- Bug 395 -------------------------------------------------------"},{"location":{"line":53,"column":1},"text":"  #------------------- Bug 348 -------------------------------------------------------"},{"location":{"line":60,"column":1},"text":"  #------------------- Bug 404 -------------------------------------------------------"}]}},{"pickle":{"id":"a3b4a8fe-5f04-4c2c-9d01-e69fa5e13b10","uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorWithoutGetConnect.feature","name":"Check that traduction is effective","language":"en","steps":[{"text":"User is on international website homepage","id":"baf3cf0c-1b15-41b9-a826-372143167b72","astNodeIds":["5167b66d-6fdc-412a-b428-f8d3655c71bc"]},{"text":"User should see all headers elements in english","id":"ce00d535-93d3-475d-bf5c-a36f48198574","astNodeIds":["db1233cb-8b36-4788-8be2-2527c53705ac"]}],"tags":[{"name":"@Bug381","astNodeId":"b4957210-bf9e-4ed5-9c13-d2afd1e03aca"}],"astNodeIds":["a4b07a6c-caf6-469c-9708-abf3300f4fe6"]}},{"pickle":{"id":"55ead6d3-471b-4159-9efc-c8aef06a9c73","uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorWithoutGetConnect.feature","name":"Check that frame have same size","language":"en","steps":[{"text":"User is on website french version on rubrique **CGV**","id":"3cd69ff0-b572-4b9e-b77a-00493a746bf4","astNodeIds":["65a95263-082f-4371-8227-6d5adec30d09"]},{"text":"User should see frame with same size after redirection","id":"7d9ec3d3-414d-4748-9206-3ba9d2b5a040","astNodeIds":["88be4fbb-e90f-4b0c-b732-c92f322343e5"]}],"tags":[{"name":"@Bug351","astNodeId":"67713597-5a61-45b2-8119-515a8229b54e"}],"astNodeIds":["19fb4759-82b7-4f54-81dd-8158d56000ea"]}},{"pickle":{"id":"ea3bc83b-952f-42e2-8a26-5baf81107940","uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorWithoutGetConnect.feature","name":"Check that **ask question button** is cliquable","language":"en","steps":[{"text":"User is on website french version on rubrique **contact-couture**","id":"7f0c7e44-27b5-4b35-b14a-8f63d99ca468","astNodeIds":["2b4ead74-252e-45f6-bf57-7b9bd553f72b"]},{"text":"User scroll-down","id":"d75c2a2c-43bb-4c4c-9277-61706200f147","astNodeIds":["b185db36-4d09-4ec2-96d9-aacfe5523aae"]},{"text":"User should be able to click on ask question","id":"cb848bed-166e-4457-8703-9e716fb05dc6","astNodeIds":["b00e02ed-15e0-4db5-8888-ee3b8280193f"]}],"tags":[{"name":"@Bug357","astNodeId":"a1a725ec-bca5-42f1-ad3c-511616b48523"}],"astNodeIds":["79873c09-6c06-4790-9a82-42f03f42c765"]}},{"pickle":{"id":"e77f8345-f092-4186-a7e1-7e2782de0e2c","uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorWithoutGetConnect.feature","name":"Check that require size for password is the same everywhere","language":"en","steps":[{"text":"User is on login version page","id":"1c963fb1-5448-4139-bb4e-0f5f8590d17d","astNodeIds":["88e22c38-73bf-4468-8e14-93b154608e18"]},{"text":"User get login password size requirement","id":"3720650e-ad48-4fdc-bf4c-50902a544975","astNodeIds":["b169ac49-3626-4d30-9871-62541cb6086e"]},{"text":"User is on inscription version page","id":"d891754c-8faa-4ba4-b475-09f5cb87b150","astNodeIds":["568cf34b-a821-477d-a899-6301de30d91d"]},{"text":"User get inscription password size requirement","id":"ae40c62a-927a-4313-8ee9-a25c9c4530b7","astNodeIds":["8afb93f5-1a4c-4d5e-a134-bf77cb42f08e"]},{"text":"User should have save size requirement","id":"a5496b53-6362-49b5-86cc-c6d83a8603cc","astNodeIds":["08eb538d-90cc-4980-ab2f-b8c8ddb84128"]}],"tags":[{"name":"@Bug375","astNodeId":"4f786408-c13f-464e-a3be-11a1c3a0405b"}],"astNodeIds":["4be974bf-8de4-4695-b552-bf595e8fa15e"]}},{"pickle":{"id":"36ca9a11-5f49-45f3-a619-1efc616c35b8","uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorWithoutGetConnect.feature","name":"Check that link aren\u0027t same","language":"en","steps":[{"text":"User is on **metier page**","id":"6f6c57a8-28e3-4018-9b78-14f3e107e08c","astNodeIds":["9494b13e-4962-4a60-98d4-c6f27aa6b539"]},{"text":"User click on **horlogerie**","id":"9bae1439-b3fd-4dc1-be16-439417485eed","astNodeIds":["f963e5c6-3a44-47c8-b3ad-d2877ef44fd9"]},{"text":"User should be on another page","id":"d5061d7e-1d42-43aa-ba01-4d4a83f6e928","astNodeIds":["44c264a2-357a-49b5-9ba0-c45c096456cd"]}],"tags":[{"name":"@Bug385","astNodeId":"5e563710-2a5d-4f90-bf1e-f835be5c75e1"}],"astNodeIds":["0cdf0f5b-68ab-4cec-905e-a6612e215cc1"]}},{"pickle":{"id":"38b3c841-6fc2-442f-8017-3efd7186432c","uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorWithoutGetConnect.feature","name":"Check that we can connect on the international website","language":"en","steps":[{"text":"User is on website french version","id":"886eac76-c903-4362-9873-c05b271824ae","astNodeIds":["c948fe70-9614-4a51-a7de-ecd307d2f748"]},{"text":"User should be able to connect","id":"2cc4ab9a-ce6e-4067-90ca-6b3875d9d739","astNodeIds":["1e295a6c-e930-49cd-8e1f-3326ba78380d"]},{"text":"User move to international website","id":"65773935-cdbf-49a4-8a45-fc2c10927d63","astNodeIds":["f8abd7ea-c904-4890-8d95-baaa78cb828d"]},{"text":"User should be also able to connect","id":"da4582d7-450d-46a7-bf39-8814fc5f7050","astNodeIds":["4f38fd3a-e750-4183-babd-4e4fec3f3719"]}],"tags":[{"name":"@Bug392","astNodeId":"2181ac51-9c77-4238-af0b-a3bcce779861"}],"astNodeIds":["dcd372c1-2cb0-467d-9a3e-23f367c8fda2"]}},{"pickle":{"id":"86d231fb-b9e7-4ee8-ab38-c54488d2baff","uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorWithoutGetConnect.feature","name":"Check that slider effects is available","language":"en","steps":[{"text":"User is on **dior maquillage** page","id":"4de745f5-3e35-46ee-b279-6b1f5abc1598","astNodeIds":["8fbd865c-8646-4ece-ad9c-22c1203fdd94"]},{"text":"User plays with slider","id":"d6c52a2e-0aa2-48d3-9c38-99bb08b9b62e","astNodeIds":["5de883e4-be6b-4d72-a19d-0e010bc5a87e"]},{"text":"User should see slider effects","id":"279e5ec0-dc16-46b5-8a75-4f51b9f441a3","astNodeIds":["fad72738-e684-4143-82a5-fa7facc16834"]}],"tags":[{"name":"@Bug395","astNodeId":"15c48f69-fee5-4d3e-b660-dab0d9e5c94a"}],"astNodeIds":["8e45f314-159d-47bd-9348-16bc10296a9f"]}},{"pickle":{"id":"78053d05-02ed-4655-94fa-a74d9f3fe089","uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorWithoutGetConnect.feature","name":"Check that text-area provides space with writing zone","language":"en","steps":[{"text":"User is on contact_couture page","id":"c68a5740-a6da-464f-836f-244b93b1ef17","astNodeIds":["3bca64e7-d270-401e-98d4-da339cd5b551"]},{"text":"User write inside zone area","id":"e07f9389-40ff-4a7c-9931-caed67a88207","astNodeIds":["099dcefb-4370-451b-abf5-b1541bf3bf8c"]},{"text":"User should see space between zone and writting","id":"2f00b8cb-d8bf-4ffe-a5b2-367fdbab6535","astNodeIds":["9f42c5f2-ffb7-4868-9f4c-0ef438e7215e"]}],"tags":[{"name":"@Bug348","astNodeId":"3afbffce-b3ee-4693-a4ef-5b3879a24938"}],"astNodeIds":["b54c3d27-0473-4da7-9756-aca59b2e6bd1"]}},{"pickle":{"id":"02b13df6-0842-4956-8704-cb257106216b","uri":"file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorWithoutGetConnect.feature","name":"Check that langage service header appear everytime","language":"en","steps":[{"text":"User is on hompage","id":"c03109b6-597d-449c-b4ba-ce1b10e27fea","astNodeIds":["98bd852d-71be-4ed6-ab4b-9fe912fc6012"]},{"text":"User plays with langage version","id":"420c08a2-e3da-42a5-b21d-d87df44ae670","astNodeIds":["ad9f51ae-3da9-4300-9d10-8634fd0c5132"]},{"text":"User should see service header appear appear","id":"912032f7-e503-4e29-874e-4456cb6a3863","astNodeIds":["b828a06f-23cf-49f8-a7d8-2ece345e73c3"]}],"tags":[{"name":"@Bug404","astNodeId":"eb206c20-b2f1-49f6-bc99-1c901b43b782"}],"astNodeIds":["9aaafa4f-82e9-4795-beda-e875307f8a66"]}},{"testCase":{"id":"fc0a1859-24f9-46cc-af19-614f9781355f","pickleId":"7cc8216f-4759-4ec9-a11c-72f38f2adaf9","testSteps":[{"id":"2538be98-01c7-4c97-b548-0440ef715fb7","hookId":"181ecd4d-d4cd-495c-9fa8-5f8d66a7b6c0"},{"id":"f3f90ee3-a942-4a48-a500-c6874dde11b1","pickleStepId":"cc1b379e-c53f-4c29-8d44-39ec13649f2e","stepDefinitionIds":["9d00cbc3-afc4-46b8-9b68-1509cb32f813"],"stepMatchArgumentsLists":[{}]},{"id":"26063a6a-bfe5-4d7f-9ebd-169d3b124aca","pickleStepId":"7d5c648c-3a63-4c27-8d86-f26aa395e66c","stepDefinitionIds":["b43ca061-7da9-4351-9875-c6d3f82ea324"],"stepMatchArgumentsLists":[{}]},{"id":"6de3c871-421f-42e9-a8a6-aed46ff69cd1","pickleStepId":"c81cbc02-b1e3-48f3-ada4-fa1fcf2fadec","stepDefinitionIds":["d777dd58-14e3-4843-b479-153e3a9afc1a"],"stepMatchArgumentsLists":[{}]},{"id":"d7a04451-b780-4f0a-a702-afa7b65e7660","pickleStepId":"6242f2b6-0f15-47c2-bef4-06f715c98f7c","stepDefinitionIds":["f3c5d74a-6513-40c8-89f7-04ab37b38c5f"],"stepMatchArgumentsLists":[{}]},{"id":"f1ce3d75-fe45-4316-8fab-09f954f9c1a9","pickleStepId":"93a87ca3-00f8-48ea-8108-0e53611785fd","stepDefinitionIds":["3a296c4f-0e8c-4528-9a85-9ea17414c35f"],"stepMatchArgumentsLists":[{}]},{"id":"6c470b0c-1407-4e7c-b87a-2ebd1f97c52d","hookId":"0746dfa9-34fc-45f7-aebb-a10dfdb4be05"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1623839788","nanos":683000000},"testCaseId":"fc0a1859-24f9-46cc-af19-614f9781355f","id":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepStarted":{"timestamp":{"seconds":"1623839788","nanos":683000000},"testStepId":"2538be98-01c7-4c97-b548-0440ef715fb7","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"13","nanos":96000000}},"timestamp":{"seconds":"1623839801","nanos":779000000},"testStepId":"2538be98-01c7-4c97-b548-0440ef715fb7","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepStarted":{"timestamp":{"seconds":"1623839801","nanos":818000000},"testStepId":"f3f90ee3-a942-4a48-a500-c6874dde11b1","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status\nfrom disconnected: received Inspector.detached event\n  (Session info: chrome\u003d91.0.4472.106)\nBuild info: version: \u00274.0.0-alpha-2\u0027, revision: \u0027f148142cf8\u0027, time: \u00272019-07-01T20:55:26\u0027\nSystem info: host: \u0027LAPTOP-CRQK64VT\u0027, ip: \u0027192.168.209.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_281\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 91.0.4472.106, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\\Users\\Pawk32\\AppData\\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63441}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: f0ad54d0ffaa868814d2606642807f62\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)\r\n\tat com.dior.BaseClass.navigateToHomePage_fr(BaseClass.java:59)\r\n\tat com.dior.steps_definition.FavorisSaveAfterDisconnectedStep.user_access_to_his_account(FavorisSaveAfterDisconnectedStep.java:14)\r\n\tat ✽.User access to his account(file:///C:/Zenity_Offshore/PAWK_Retest/Dior/src/test/resources/DiorGetConnect.feature:4)\r\n","duration":{"seconds":"1","nanos":234000000}},"timestamp":{"seconds":"1623839803","nanos":52000000},"testStepId":"f3f90ee3-a942-4a48-a500-c6874dde11b1","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepStarted":{"timestamp":{"seconds":"1623839803","nanos":52000000},"testStepId":"26063a6a-bfe5-4d7f-9ebd-169d3b124aca","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1623839803","nanos":52000000},"testStepId":"26063a6a-bfe5-4d7f-9ebd-169d3b124aca","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepStarted":{"timestamp":{"seconds":"1623839803","nanos":52000000},"testStepId":"6de3c871-421f-42e9-a8a6-aed46ff69cd1","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1623839803","nanos":52000000},"testStepId":"6de3c871-421f-42e9-a8a6-aed46ff69cd1","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepStarted":{"timestamp":{"seconds":"1623839803","nanos":52000000},"testStepId":"d7a04451-b780-4f0a-a702-afa7b65e7660","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1623839803","nanos":52000000},"testStepId":"d7a04451-b780-4f0a-a702-afa7b65e7660","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepStarted":{"timestamp":{"seconds":"1623839803","nanos":52000000},"testStepId":"f1ce3d75-fe45-4316-8fab-09f954f9c1a9","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1623839803","nanos":52000000},"testStepId":"f1ce3d75-fe45-4316-8fab-09f954f9c1a9","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepStarted":{"timestamp":{"seconds":"1623839803","nanos":52000000},"testStepId":"6c470b0c-1407-4e7c-b87a-2ebd1f97c52d","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"7","nanos":75000000}},"timestamp":{"seconds":"1623839810","nanos":127000000},"testStepId":"6c470b0c-1407-4e7c-b87a-2ebd1f97c52d","testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testCaseFinished":{"timestamp":{"seconds":"1623839810","nanos":127000000},"testCaseStartedId":"65711792-7ba2-4ccf-8b00-5362e0f96ee9"}},{"testCase":{"id":"d918b3cb-7e91-44c9-80d5-41ea43b570bb","pickleId":"a3b4a8fe-5f04-4c2c-9d01-e69fa5e13b10","testSteps":[{"id":"4823e2f2-3cdd-428e-a7e1-1d435499cdaa","hookId":"181ecd4d-d4cd-495c-9fa8-5f8d66a7b6c0"},{"id":"5de74c61-d6cc-4dd3-a895-e1e7193ccfcf","pickleStepId":"baf3cf0c-1b15-41b9-a826-372143167b72","stepDefinitionIds":["7839e8dc-eb8d-4ec9-ae6d-575a13d77c57"],"stepMatchArgumentsLists":[{}]},{"id":"cb749183-db91-453a-b3de-16f25c8d17f8","pickleStepId":"ce00d535-93d3-475d-bf5c-a36f48198574","stepDefinitionIds":["4756a476-d2bf-405a-bf1a-f333f855326f"],"stepMatchArgumentsLists":[{}]},{"id":"abf456e3-51a8-427d-8e22-459a4fc47825","hookId":"0746dfa9-34fc-45f7-aebb-a10dfdb4be05"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1623839810","nanos":143000000},"testCaseId":"d918b3cb-7e91-44c9-80d5-41ea43b570bb","id":"dca96d06-f434-40ec-ba19-bcda9e6e8527"}},{"testStepStarted":{"timestamp":{"seconds":"1623839810","nanos":143000000},"testStepId":"4823e2f2-3cdd-428e-a7e1-1d435499cdaa","testCaseStartedId":"dca96d06-f434-40ec-ba19-bcda9e6e8527"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.SessionNotCreatedException: session not created\nfrom disconnected: received Inspector.detached event\n  (Session info: chrome\u003d91.0.4472.106)\nBuild info: version: \u00274.0.0-alpha-2\u0027, revision: \u0027f148142cf8\u0027, time: \u00272019-07-01T20:55:26\u0027\nSystem info: host: \u0027LAPTOP-CRQK64VT\u0027, ip: \u0027192.168.209.1\u0027, os.name: \u
